@@ -1,0 +1,44 @@
+[project]
+name = "dexmimicgen"
+channels = ["pytorch", "nvidia", "conda-forge"]
+platforms = ["linux-64"]
+
+[system-requirements]
+cuda = "12.1"
+
+[activation]
+scripts = ["env_setup.sh"]
+
+[dependencies]
+python = ">=3.10, <3.11"
+
+cuda-version = "12.1.*"
+pytorch-cuda = "==12.1"
+pytorch = ">=2.5, <2.6"
+
+# This is the last numpy in conda-forge that does NOT support python 3.11
+numpy = "==1.23.3"
+
+pip = ">=25.0.1,<26"
+setuptools = ">=75.8.2,<76"
+wheel = ">=0.45.1,<0.46"
+cython = ">=3.0.12,<4"
+
+ruff = ">=0.11.2,<0.12"
+wandb = ">=0.19.8,<0.20"
+termcolor = ">=2.5.0,<3"
+huggingface_hub = ">=0.29.3,<0.30"
+
+[pypi-dependencies]
+# pufferlib comes with common RL dependencies.
+pufferlib = "*"
+
+# dexmimicgen dependencies
+h5py = "==3.12.1"
+imageio = "==2.36.1"
+
+# robosuite = ">=1.5.1, <1.6"
+robosuite = {path = "./robosuite", editable = true}
+
+dexmimicgen = {path = ".", editable = true}
+robosuite-models = ">=1.0.0, <2"

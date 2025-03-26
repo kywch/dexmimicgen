@@ -150,6 +150,10 @@ class TwoArmDexMGEnv(TwoArmEnv):
             if old_path is None:
                 continue
 
+            # If the asset exists, then don't change it
+            if os.path.exists(old_path):
+                continue
+
             old_path_split = old_path.split("/")
             # maybe replace all paths to robosuite assets
             check_lst = [
