@@ -1,6 +1,6 @@
 h5py==3.12.1
 imageio==2.36.1
-numpy
+numpy==1.23.3
 setuptools
 termcolor
 huggingface_hub

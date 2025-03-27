@@ -26,8 +26,10 @@ cython = ">=3.0.12,<4"
 
 ruff = ">=0.11.2,<0.12"
 wandb = ">=0.19.8,<0.20"
+
 termcolor = ">=2.5.0,<3"
 huggingface_hub = ">=0.29.3,<0.30"
+hidapi = ">=0.12.0.post2,<0.13"
 
 [pypi-dependencies]
 # pufferlib comes with common RL dependencies.
@@ -35,7 +37,7 @@ pufferlib = "*"
 
 # dexmimicgen dependencies
 h5py = "==3.12.1"
-imageio = "==2.36.1"
+imageio = {version = "==2.36.1", extras = ["ffmpeg"]}
 
 # robosuite = ">=1.5.1, <1.6"
 robosuite = {path = "./robosuite", editable = true}

@@ -117,3 +117,7 @@ mjkey.txt
 
 MUJOCO_LOG.TXT
 datasets
+
+tmp/
+.vscode/
+teleop-mink-data/
